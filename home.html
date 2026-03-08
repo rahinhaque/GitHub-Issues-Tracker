@@ -1,11 +1,96 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
- <meta charset="UTF-8">
- <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <title>GitHub Issues Tracker || Homepage</Track></title>
-</head>
-<body>
- Home
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Github-Issue-Tracker || Login Page</title>
+    <!-- tailwindcss+DaisyUI -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5/themes.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- GoogleFonts Outfit Link  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Outfit:wght@100..900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="shortcut icon"
+      href="assets/github-logo.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="style/style.css" />
+  </head>
+
+  <body class="bg-[#F9FAFB] min-h-screen">
+    <!-- Navbar -->
+    <nav class="bg-white shadow-sm">
+      <div
+        class="max-w-[1280px] mx-auto px-6 py-4 flex items-center justify-between"
+      >
+        <!-- Left: Logo + Title -->
+        <div class="flex items-center gap-3">
+          <img
+            class="w-[32px] h-[32px]"
+            src="assets/github-logo.png"
+            alt="GitHub Logo"
+          />
+          <h1 class="text-[18px] text-[#1F2937] font-semibold">
+            GitHub Issues Tracker
+          </h1>
+        </div>
+
+        <!-- Right: Search + New Issue Button -->
+        <div class="flex items-center gap-3">
+          <!-- Search Input -->
+          <div class="relative">
+            <i
+              class="fa-solid fa-magnifying-glass absolute left-3 top-1/2 -translate-y-1/2 text-[#94A3B8] text-[14px]"
+            ></i>
+            <input
+              type="text"
+              id="searchInput"
+              placeholder="Search issues..."
+              class="border border-[#E2E8F0] rounded-lg pl-9 pr-4 py-2 text-[14px] text-[#1F2937] placeholder-[#94A3B8] focus:outline-none focus:border-[#6366F1] focus:ring-2 focus:ring-[#6366F1]/20 transition-all w-[220px]"
+            />
+          </div>
+
+          <!-- + New Issue Button -->
+          <button
+            id="newIssueBtn"
+            class="bg-[#6366F1] hover:bg-[#4F46E5] text-white font-semibold text-[14px] px-4 py-2 rounded-lg transition-all duration-200 cursor-pointer flex items-center gap-1.5"
+          >
+            + New Issue
+          </button>
+        </div>
+      </div>
+
+      <!-- Gradient Line -->
+      <div
+        class="h-[3px] bg-gradient-to-r from-[#6366F1] via-[#8B5CF6] to-[#6366F1]"
+      ></div>
+    </nav>
+  </body>
+
+  <script src="script/home.js"></script>
 </html>
