@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Github-Issue-Tracker || Login Page</title>
+    <!-- tailwindcss+DaisyUI -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5/themes.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- GoogleFonts Outfit Link  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Outfit:wght@100..900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="shortcut icon"
+      href="assets/github-logo.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="style/style.css" />
+  </head>
+
+  <body class="bg-[#F9FAFB] min-h-screen flex items-center justify-center">
+    <!-- Login Card -->
+    <div class="bg-white rounded-2xl shadow-lg w-full max-w-[480px] p-10 mx-4">
+      <!-- Header: Logo + Title -->
+      <div
+        class="text-center flex flex-col justify-center items-center space-y-3 mb-8"
+      >
+        <img
+          class="w-[80px] h-[80px]"
+          src="assets/github-logo.png"
+          alt="GitHub Logo"
+        />
+        <h2 class="text-[24px] text-[#1F2937] font-semibold">
+          GitHub Issues Tracker
+        </h2>
+        <p class="text-[#64748B] text-[16px]">Sign in to manage your issues</p>
+      </div>
+
+      <!-- Login Form -->
+      <form id="loginForm" class="space-y-5">
+        <!-- Username Field -->
+        <div>
+          <label
+            class="block text-[#1F2937] font-medium text-[15px] mb-1.5"
+            for="username"
+            >Username</label
+          >
+          <input
+            type="text"
+            id="username"
+            placeholder="Enter Username"
+            class="w-full border border-[#E2E8F0] rounded-lg px-4 py-3 text-[15px] text-[#1F2937] placeholder-[#94A3B8] focus:outline-none focus:border-[#6366F1] focus:ring-2 focus:ring-[#6366F1]/20 transition-all"
+          />
+          <p class="text-[#6366F1] text-[13px] mt-1">Default: admin</p>
+        </div>
+
+        <!-- Password Field -->
+        <div>
+          <label
+            class="block text-[#1F2937] font-medium text-[15px] mb-1.5"
+            for="password"
+            >Password</label
+          >
+          <input
+            type="password"
+            id="password"
+            placeholder="Enter Password"
+            class="w-full border border-[#E2E8F0] rounded-lg px-4 py-3 text-[15px] text-[#1F2937] placeholder-[#94A3B8] focus:outline-none focus:border-[#6366F1] focus:ring-2 focus:ring-[#6366F1]/20 transition-all"
+          />
+          <p class="text-[#6366F1] text-[13px] mt-1">Default: admin123</p>
+        </div>
+
+        <!-- Sign In Button -->
+        <button
+          type="submit"
+          id="signInBtn"
+          class="w-full bg-[#6366F1] hover:bg-[#4F46E5] text-white font-semibold text-[16px] py-3 rounded-xl transition-all duration-200 cursor-pointer mt-2"
+        >
+          Sign In
+        </button>
+      </form>
+
+      <!-- OR Divider -->
+      <div class="flex items-center my-6">
+        <div class="flex-1 border-t border-[#E2E8F0]"></div>
+        <span class="px-4 text-[#94A3B8] text-[14px]">OR</span>
+        <div class="flex-1 border-t border-[#E2E8F0]"></div>
+      </div>
+
+      <!-- Demo Credentials -->
+      <div class="text-center">
+        <p class="text-[#6366F1] text-[14px] mb-3">Demo Credentials:</p>
+        <div class="bg-[#F8FAFC] border border-[#E2E8F0] rounded-xl py-4 px-6">
+          <p class="text-[#1F2937] text-[15px]">
+            <span class="font-bold">Username:</span> admin
+          </p>
+          <p class="text-[#1F2937] text-[15px]">
+            <span class="font-bold">Password:</span> admin123
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
