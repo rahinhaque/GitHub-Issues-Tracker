@@ -59,18 +59,18 @@ const displayAllCards = (cards) => {
         <div
             class="bg-white rounded-xl border border-[#E2E8F0] shadow-sm overflow-hidden text-left relative flex flex-col h-full"
           >
-            <!-- Top Green Border -->
-            <div class="absolute top-0 left-0 right-0 h-1 bg-[#10B981]"></div>
+            <!-- Top Border -->
+            <div class="absolute top-0 left-0 right-0 h-1 ${card.status.toLowerCase() === "open" ? "bg-[#10B981]" : "bg-[#A855F7]"}"></div>
 
             <div class="p-5 flex-1">
               <!-- 1st div: Header -->
               <div class="flex items-center justify-between mb-4">
                 <div
-                  class="w-[32px] h-[32px] bg-[#ECFDF5] rounded-full flex items-center justify-center"
+                  class="w-[32px] h-[32px] ${card.status.toLowerCase() === "open" ? "bg-[#ECFDF5]" : "bg-[#F3E8FF]"} rounded-full flex items-center justify-center"
                 >
                   <img
-                    src="assets/Open-Status.png"
-                    alt="status"
+                    src="${card.status.toLowerCase() === "open" ? "assets/Open-Status.png" : "assets/Closed- Status .png"}"
+                    alt="${card.status}"
                     class="w-4 h-4 object-contain"
                   />
                 </div>
