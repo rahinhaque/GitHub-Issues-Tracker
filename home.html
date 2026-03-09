@@ -36,7 +36,7 @@
 
     <link
       rel="shortcut icon"
-      href="assets/github-logo.png"
+      href="assets/icons8-github-50.png"
       type="image/x-icon"
     />
     <link rel="stylesheet" href="style/style.css" />
@@ -185,7 +185,6 @@
       </div>
     </main>
 
-
     <!-- All cards  -->
     <section class="max-w-[1280px] mx-auto px-4 sm:px-6 w-full mb-8">
       <!-- parent div  -->
@@ -202,16 +201,96 @@
       </div>
     </section>
 
-    <!-- Open cards  -->
-    
+    <!-- modal  -->
+    <!-- Open the modal using ID.showModal() method -->
+    <button class="btn" onclick="my_modal_1.showModal()">open modal</button>
+    <dialog id="my_modal_1" class="modal">
+      <div
+        class="modal-box w-11/12 max-w-2xl bg-white p-6 sm:p-8 rounded-2xl shadow-xl"
+      >
+        <h1
+          class="font-bold text-[24px] sm:text-[26px] text-[#1F2937] mb-3 leading-tight"
+        >
+          Fix broken image uploads
+        </h1>
 
+        <!-- Subtitle section -->
+        <div
+          class="flex flex-wrap items-center gap-2 sm:gap-3 text-[#64748B] text-[14px] mb-6"
+        >
+          <div
+            class="bg-[#10B981] text-white px-3 py-1 rounded-full text-[13px] font-medium"
+          >
+            Opened
+          </div>
+          <span class="text-[#94A3B8] text-[10px]"
+            ><i class="fa-solid fa-circle"></i
+          ></span>
+          <p>Opened by Fahim Ahmed</p>
+          <span class="text-[#94A3B8] text-[10px]"
+            ><i class="fa-solid fa-circle"></i
+          ></span>
+          <p>22/02/2026</p>
+        </div>
 
+        <!-- Badges -->
+        <div class="flex items-center gap-2 mb-6 flex-wrap">
+          <div
+            class="bg-[#FEF2F2] border border-[#FECACA] text-[#EF4444] px-2.5 py-1 rounded-full text-[11px] font-bold flex items-center gap-1.5 uppercase tracking-wide w-fit whitespace-nowrap"
+          >
+            <i class="fa-solid fa-bug text-[10px]"></i> BUG
+          </div>
+          <div
+            class="bg-[#FEFCE8] border border-[#FEF08A] text-[#EAB308] px-2.5 py-1 rounded-full text-[11px] font-bold flex items-center gap-1.5 uppercase tracking-wide w-fit whitespace-nowrap"
+          >
+            <i class="fa-solid fa-circle-question text-[10px]"></i> HELP WANTED
+          </div>
+        </div>
 
+        <!-- Description -->
+        <div class="mb-7">
+          <p class="text-[#64748B] text-[15px] sm:text-[16px] leading-relaxed">
+            The navigation menu doesn't collapse properly on mobile devices.
+            Need to fix the responsive behavior.
+          </p>
+        </div>
 
+        <!-- Assignee & Priority Box -->
+        <div
+          class="bg-[#F8FAFC] rounded-xl p-5 sm:p-6 mb-8 flex flex-col sm:flex-row sm:items-center gap-6 sm:gap-24 lg:gap-32 w-full"
+        >
+          <div class="flex-1">
+            <h2 class="text-[#64748B] text-[15px] mb-1.5 font-medium">
+              Assignee:
+            </h2>
+            <h1 class="text-[#1F2937] font-semibold text-[17px]">
+              Fahim Ahmed
+            </h1>
+          </div>
+          <div class="flex-1">
+            <h2 class="text-[#64748B] text-[15px] mb-1.5 font-medium">
+              Priority:
+            </h2>
+            <div
+              class="bg-[#EF4444] text-white px-3.5 py-1 rounded-full text-[12px] font-medium w-fit uppercase inline-block"
+            >
+              HIGH
+            </div>
+          </div>
+        </div>
 
-
-
-
+        <div class="modal-action mt-0 flex justify-end">
+          <form method="dialog">
+            <!-- if there is a button in form, it will close the modal -->
+            <button
+              class="bg-[#4F46E5] hover:bg-[#4338CA] text-white px-6 py-2.5 rounded-lg font-medium text-[15px] transition-all cursor-pointer"
+            >
+              Close
+            </button>
+          </form>
+        </div>
+      </div>
+    </dialog>
   </body>
 
   <script src="script/home.js"></script>
