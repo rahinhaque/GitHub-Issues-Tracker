@@ -36,19 +36,24 @@ document.addEventListener("click", () => {
   });
 });
 
+let allFetchedCards = [];
+
 //main js codes of fetching and showing cards and modal etc.
 const loadAllCards = async () => {
   const res = await fetch(
     "https://phi-lab-server.vercel.app/api/v1/lab/issues",
   );
   const data = await res.json();
-  // console.log(data.data);
-  displayAllCards(data.data);
+  allFetchedCards = data.data;
+  displayAllCards(allFetchedCards);
 };
 
 const displayAllCards = (cards) => {
   const cardContainer = document.getElementById("card-container");
   cardContainer.innerHTML = "";
+
+  const issuesCountElement = document.getElementById("issues");
+  issuesCountElement.innerText = `${cards.length} Issues`;
 
   cards.forEach((card) => {
     console.log(card);
@@ -136,5 +141,23 @@ const displayAllCards = (cards) => {
     cardContainer.append(div);
   });
 };
+
+document.getElementById("btnAll").addEventListener("click", () => {
+  displayAllCards(allFetchedCards);
+});
+
+document.getElementById("btnOpen").addEventListener("click", () => {
+  const openCards = allFetchedCards.filter(
+    (card) => card.status.toLowerCase() === "open",
+  );
+  displayAllCards(openCards);
+});
+
+document.getElementById("btnClosed").addEventListener("click", () => {
+  const closedCards = allFetchedCards.filter(
+    (card) => card.status.toLowerCase() === "closed",
+  );
+  displayAllCards(closedCards);
+});
 
 loadAllCards();
