@@ -40,6 +40,9 @@ let allFetchedCards = [];
 
 //main js codes of fetching and showing cards and modal etc.
 const loadAllCards = async () => {
+  const cardContainer = document.getElementById("card-container");
+  cardContainer.innerHTML = `<div class="col-span-1 md:col-span-2 lg:col-span-4 flex justify-center py-20"><span class="loading loading-spinner text-secondary loading-lg scale-150"></span></div>`;
+
   const res = await fetch(
     "https://phi-lab-server.vercel.app/api/v1/lab/issues",
   );
@@ -143,21 +146,36 @@ const displayAllCards = (cards) => {
 };
 
 document.getElementById("btnAll").addEventListener("click", () => {
-  displayAllCards(allFetchedCards);
+  const cardContainer = document.getElementById("card-container");
+  cardContainer.innerHTML = `<div class="col-span-1 md:col-span-2 lg:col-span-4 flex justify-center py-20"><span class="loading loading-spinner text-secondary loading-lg scale-150"></span></div>`;
+
+  setTimeout(() => {
+    displayAllCards(allFetchedCards);
+  }, 400); // 400ms simulate fetching time so spinner is visible
 });
 
 document.getElementById("btnOpen").addEventListener("click", () => {
-  const openCards = allFetchedCards.filter(
-    (card) => card.status.toLowerCase() === "open",
-  );
-  displayAllCards(openCards);
+  const cardContainer = document.getElementById("card-container");
+  cardContainer.innerHTML = `<div class="col-span-1 md:col-span-2 lg:col-span-4 flex justify-center py-20"><span class="loading loading-spinner text-secondary loading-lg scale-150"></span></div>`;
+
+  setTimeout(() => {
+    const openCards = allFetchedCards.filter(
+      (card) => card.status.toLowerCase() === "open",
+    );
+    displayAllCards(openCards);
+  }, 400);
 });
 
 document.getElementById("btnClosed").addEventListener("click", () => {
-  const closedCards = allFetchedCards.filter(
-    (card) => card.status.toLowerCase() === "closed",
-  );
-  displayAllCards(closedCards);
+  const cardContainer = document.getElementById("card-container");
+  cardContainer.innerHTML = `<div class="col-span-1 md:col-span-2 lg:col-span-4 flex justify-center py-20"><span class="loading loading-spinner text-secondary loading-lg scale-150"></span></div>`;
+
+  setTimeout(() => {
+    const closedCards = allFetchedCards.filter(
+      (card) => card.status.toLowerCase() === "closed",
+    );
+    displayAllCards(closedCards);
+  }, 400);
 });
 
 //modal functions..
