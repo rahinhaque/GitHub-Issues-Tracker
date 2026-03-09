@@ -41,7 +41,7 @@ let allFetchedCards = [];
 //main js codes of fetching and showing cards and modal etc.
 const loadAllCards = async () => {
   const cardContainer = document.getElementById("card-container");
-  cardContainer.innerHTML = `<div class="col-span-1 md:col-span-2 lg:col-span-4 flex justify-center py-20"><span class="loading loading-spinner text-secondary loading-lg scale-150"></span></div>`;
+  cardContainer.innerHTML = `<div class="col-span-1 md:col-span-2 lg:col-span-4 flex justify-center py-20"><span class="loading loading-spinner text-primary loading-lg scale-150"></span></div>`;
 
   const res = await fetch(
     "https://phi-lab-server.vercel.app/api/v1/lab/issues",
@@ -147,7 +147,7 @@ const displayAllCards = (cards) => {
 
 document.getElementById("btnAll").addEventListener("click", () => {
   const cardContainer = document.getElementById("card-container");
-  cardContainer.innerHTML = `<div class="col-span-1 md:col-span-2 lg:col-span-4 flex justify-center py-20"><span class="loading loading-spinner text-secondary loading-lg scale-150"></span></div>`;
+  cardContainer.innerHTML = `<div class="col-span-1 md:col-span-2 lg:col-span-4 flex justify-center py-20"><span class="loading loading-spinner text-primary loading-lg scale-150"></span></div>`;
 
   setTimeout(() => {
     displayAllCards(allFetchedCards);
@@ -156,7 +156,7 @@ document.getElementById("btnAll").addEventListener("click", () => {
 
 document.getElementById("btnOpen").addEventListener("click", () => {
   const cardContainer = document.getElementById("card-container");
-  cardContainer.innerHTML = `<div class="col-span-1 md:col-span-2 lg:col-span-4 flex justify-center py-20"><span class="loading loading-spinner text-secondary loading-lg scale-150"></span></div>`;
+  cardContainer.innerHTML = `<div class="col-span-1 md:col-span-2 lg:col-span-4 flex justify-center py-20"><span class="loading loading-spinner text-primary loading-lg scale-150"></span></div>`;
 
   setTimeout(() => {
     const openCards = allFetchedCards.filter(
@@ -168,7 +168,7 @@ document.getElementById("btnOpen").addEventListener("click", () => {
 
 document.getElementById("btnClosed").addEventListener("click", () => {
   const cardContainer = document.getElementById("card-container");
-  cardContainer.innerHTML = `<div class="col-span-1 md:col-span-2 lg:col-span-4 flex justify-center py-20"><span class="loading loading-spinner text-secondary loading-lg scale-150"></span></div>`;
+  cardContainer.innerHTML = `<div class="col-span-1 md:col-span-2 lg:col-span-4 flex justify-center py-20"><span class="loading loading-spinner text-primary loading-lg scale-150"></span></div>`;
 
   setTimeout(() => {
     const closedCards = allFetchedCards.filter(
