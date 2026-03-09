@@ -75,7 +75,15 @@ const displayAllCards = (cards) => {
                   />
                 </div>
                 <div
-                  class="bg-[#FEF2F2] text-[#EF4444] font-semibold px-3 py-1 rounded-full text-[12px]"
+                  class="font-semibold px-3 py-1 rounded-full text-[12px] uppercase ${
+                    card.priority.toLowerCase() === "high"
+                      ? "bg-[#FEF2F2] text-[#EF4444]"
+                      : card.priority.toLowerCase() === "medium"
+                        ? "bg-[#FEFCE8] text-[#EAB308]"
+                        : card.priority.toLowerCase() === "low"
+                          ? "bg-[#F1F5F9] text-[#64748B]"
+                          : "bg-gray-100 text-gray-500"
+                  }"
                 >
                   ${card.priority}
                 </div>
